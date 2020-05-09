@@ -180,6 +180,11 @@
 \makeindex[name=ppl, title={Nimede register}]
 \makeindex[title={Indeks}]
 
+% See also
+\makeatletter
+\newcommand{\gobblecomma}[1]{\@gobble{#1}\ignorespaces}
+\makeatother
+
 \usepackage{csquotes}
 
 
@@ -240,7 +245,7 @@ Copyright \copyright\ \the\year\ \thanklessauthor
 
 %\par\smallcaps{tufte-latex.googlecode.com}
 
-\par \doclicenseThis \index{license}
+\par \doclicenseThis 
 
 \par\textit{First printing, \monthyear}
 \end{fullwidth}
@@ -307,24 +312,13 @@ Juhatame sisse.
 
 \chapter{Andrus Aaslaid}
 \input{chapters/andrus_aaslaid}
-\chapter{Ahti Heinla}
-\chapter{Madis Kaal}
+
 \chapter{Andres Kütt}
 \input{chapters/andres_kytt}
-\chapter{Jaanus Lillenberg}
-\chapter{Kaspar Loit}
-\chapter{Tarmo Mamers}
-\chapter{Tarvi Martens}
-\chapter{Peeter Marvet}
-\chapter{Jaan  Priisalu}
-\chapter{Tanel Raja}
-\chapter{Tõnis Reimo}
-\chapter{Henn  Ruukel}
-\chapter{Tõnu Samuel}
-\chapter{Margus Sutt}
-\chapter{Taavi  Talvik}
-\chapter{Veiko Tamm}
-\chapter{Vilve Vene}
+
+\chapter{Meelis Roos}
+\input{chapters/meelis_roos}
+
 
 \chapter{Võrgustiku analüüs}
 \begin{itemize}
@@ -342,7 +336,8 @@ Juhatame sisse.
 	\item Tundub, et mingil hetkel oli ajalehekuulutuse kaudu omale tech-teami hankimine täiesti levinud praktika (vt. Vilve, Bluemoon, Kütt)
 	\item \enquote{Kõik, mis on võimalik inimese peas, on võimalik ka päriselt}. Priit Raspel, Jaan Tallinn
 	\item Vene kogukond on täiesti tundmata ja, tundub, elas mingit täiesti oma elu. Kahju, nutikad inimesed, nii palju, kui näha oli
-	\item Mis asi see oli, et nii Jaan kui Andres P. tegid esimese asjana tekstiredaktori? Seotud mitmel puhul läbi käinud mõttega sellest, et vanasti oli arvuti ühest küljest kättesaadavam ja teisalt vaesem. Kogu soft tuli ise kirjutada aga selle ka _sai_ ise kirjutada
+	\item Mis asi see oli, et nii Jaan kui Andres P. tegid esimese asjana tekstiredaktori? Seotud mitmel puhul läbi käinud mõttega sellest, et vanasti oli arvuti ühest küljest kättesaadavam ja teisalt vaesem. Kogu soft tuli ise kirjutada aga selle ka \emph{sai} ise kirjutada
+	\item Õpetajatelt (Meelis, AK, Anto jt.) sai pigem üldist juhendamist ja suunamist kui konkreetset õpet
 \end{itemize}
 
 %%
