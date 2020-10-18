@@ -35,6 +35,7 @@
 
 \hypersetup{colorlinks}% uncomment this line if you prefer colored hyperlinks (e.g., for onscreen viewing)
 
+
 %%
 % Book metadata
 %\title{print(memcpy[])\thanks{Thanks to Edward R.~Tufte for his inspiration.}}
@@ -188,6 +189,22 @@
 \usepackage{csquotes}
 
 
+%% Versioneerimine
+
+
+
+\newcounter{run}
+\InputIfFileExists{\jobname.runs}{}{}
+\stepcounter{run}
+
+\usepackage{atveryend}
+\usepackage{newfile}
+\AtVeryEndDocument{%
+  \newoutputstream{runs}%
+  \openoutputfile{\jobname.runs}{runs}%
+  \addtostream{runs}{\string\setcounter{run}{\number\value{run}}}%
+  \closeoutputstream{runs}%
+}
 
 \begin{document}
 
@@ -247,7 +264,7 @@ Copyright \copyright\ \the\year\ \thanklessauthor
 
 \par \doclicenseThis 
 
-\par\textit{First printing, \monthyear}
+\par\textit{\monthyear. Version V0.\therun}
 \end{fullwidth}
 
 % r.5 contents
@@ -360,6 +377,7 @@ Juhatame sisse.
 
 \printindex[ppl]
 \printindex
+
 
 \end{document}
 
