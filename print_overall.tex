@@ -207,6 +207,13 @@
 %% Küsimuse vormistus
 \newcommand{\question}[1]{\textbf{\enquote{#1}}}
 
+% Reset the sidenote number each chapter
+\let\oldchapter\chapter
+\def\chapter{%
+  \setcounter{footnote}{0}%
+  \oldchapter
+}
+
 \begin{document}
 
 % Front matter
