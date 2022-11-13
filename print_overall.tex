@@ -39,7 +39,7 @@
 %%
 % Book metadata
 %\title{print(memcpy[])\thanks{Thanks to Edward R.~Tufte for his inspiration.}}
-\title{memcpy.print()}
+\title{print(memcpy[])}
 \author[Andres Kütt]{Andres Kütt}
 \publisher{TeamConsulting}
 
@@ -275,7 +275,8 @@ Design and programming are human activities; forget that and all is lost.
 \setlength{\parskip}{\baselineskip}
 Copyright \copyright\ \the\year\ \thanklessauthor
 
-\par\smallcaps{Published by \thanklesspublisher}
+\par\smallcaps{Toimetanud Kadri Põdra}
+\par\smallcaps{Välja andnud \thanklesspublisher}
 
 %\par\smallcaps{tufte-latex.googlecode.com}
 
@@ -305,7 +306,7 @@ Toivole, Meelisele ja teistele.
 
 % r.9 introduction
 \cleardoublepage
-\chapter*{Sissejuhatus}
+\chapter{Sissejuhatus}
 \input{chapters/sissejuhatus}
  
 %%
@@ -418,8 +419,9 @@ Toivole, Meelisele ja teistele.
 
 \backmatter
 
-
+\addcontentsline{toc}{chapter}{Nimeloend}
 \printindex[ppl]
+\addcontentsline{toc}{chapter}{Indeks}
 \printindex
 
 
