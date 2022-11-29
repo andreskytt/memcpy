@@ -6,7 +6,7 @@
 % arara: xelatex: { shell: true, synctex: true} 
 % arara: latexmk: { clean: partial }
 
-\documentclass{tufte-book}
+\documentclass[a4paper]{tufte-book}
 \usepackage[
     type={CC},
     modifier={by-nc-nd},
@@ -223,6 +223,7 @@
 
 
 \usepackage{multicol}
+\usepackage{pdfpages}
 %\usepackage{verse}
 \begin{document}
 
@@ -231,6 +232,7 @@
 
 % r.1 blank page
 \blankpage
+%\includepdf[fitpaper=true, pages=-]{mock_kaas.pdf}
 
 % v.2 epigraphs
 \newpage\thispagestyle{empty}
@@ -239,6 +241,9 @@ Design and programming are human activities; forget that and all is lost.
 }{Bjarne Stroustrup%, {\itshape Design, Form, and Chaos}
 }
 \vfill
+\def\svgwidth{6cm}
+%\input{barcode.pdf_tex}
+
 \begin{fullwidth}
 \sffamily\large
 \begin{doublespace}
